@@ -53,6 +53,6 @@ checkpoint = ModelCheckpoint('model-{epoch:03d}.model',
                             save_best_only=True,
                             mode='auto')
 
-history = model.fit_generator(train_generator, epochs=10,
+history = model.fit(train_generator, epochs=10,
                              validation_data=validation_generator,
                              callbacks=[checkpoint])
